@@ -62,7 +62,7 @@ img {
 .header__container {
   max-width: 1352px;
   backdrop-filter: blur(60px);
-  background: rgba(108, 185, 171, 0.7);
+  background: rgba(108, 185, 171);
   padding: 12px 26px;
   display: flex;
   justify-content: space-between;
@@ -145,7 +145,7 @@ img {
   font-size: 88px;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   max-width: 800px;
 }
 
@@ -223,7 +223,7 @@ img {
 }
 
 .footer__container {
-  padding: 0;
+  /* padding: 0; */
 
   display: grid;
   gap: 38px;
