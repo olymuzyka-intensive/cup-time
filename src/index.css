@@ -508,6 +508,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 .modal__title, .modal__price {
@@ -518,7 +519,7 @@ input[type="number"] {
 }
 
 .modal__title {
-  width: 350px;
+  max-width: 350px;
 }
 
 .modal-item {
