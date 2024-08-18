@@ -484,7 +484,6 @@ input[type="number"] {
   width: 100%;
   margin: auto;
   position: relative;
-  overflow: hidden;
 }
 
 .modal__img {
@@ -834,7 +833,7 @@ input[type="number"] {
     padding: 8px 16px;
   }
 
-  .header__menu {
+  .header__nav {
     display: none;
   }
 
@@ -843,6 +842,37 @@ input[type="number"] {
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
+    right: 16px;
+
+  }
+
+  .header__nav.active {
+    display: flex; /* Показать навигацию при активации бургера */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    height: 100vh;
+    background-color: #6cb9ab;
+    z-index: 1000;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    display: block; /* Показать кнопку-бургер на мобильных устройствах */
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
   }
 
@@ -943,14 +973,17 @@ input[type="number"] {
   }
 
   .modal {
-    width: 400px;
-    height: 90vh;
+    width: 90%;
+    max-width: 400px;
     flex-direction: column;
+  }
+
+  .modal__info {
+    width: 100%;
   }
   
   .modal__img {
     width: 100%;
-    height: 90vh;
   }
   
 }
