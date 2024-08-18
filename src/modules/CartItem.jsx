@@ -21,8 +21,6 @@ export const CartItem = ({data}) => {
       updateQuantity(data.id, newQuantity)
     }
 
-
-
   return (<li className="cart-item">
     <img className="cart-item__image" src={`${API_URL}${data.img}`} alt={data.title} />
     <div className="cart-item__info">

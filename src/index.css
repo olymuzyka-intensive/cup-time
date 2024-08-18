@@ -23,6 +23,7 @@ body {
   font-size: 20px;
   line-height: 1.24;
   color: #1d1c1d;
+  min-width: 320px;
 }
 
 ul {
@@ -79,6 +80,7 @@ input[type="number"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 6px;
 }
 
 .header__logo-link {
@@ -90,6 +92,7 @@ input[type="number"] {
   align-items: center;
   gap: 50px;
 }
+
 .header__menu-link.active {
   color: #64099b;
 }
@@ -105,42 +108,18 @@ input[type="number"] {
   padding: 10px 4px 3px;
 }
 
-.header__mobile {
-  display: none;
-  flex-direction: column;
+.header__control {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border: none;
-  background: none;
-  /* position: absolute; */
-  /* right: 0px; */
-  cursor: pointer;
-  span {
-    display: flex;
-    background: white;
-    width: 20px;
-    height: 1px;
-    content: "";
-    position: relative;
-  }
-  span::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 1px;
-    background: white;
-    top: -4px;
-  }
-  span::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 1px;
-    background: white;
-    top: 4px;
-  }
+  gap: 16px;
+}
+
+.header__close-btn {
+  display: none;
+}
+
+.header__burger {
+  display: none; /* Скрыть кнопку-бургер по умолчанию */
 }
 
 .promo {
@@ -149,6 +128,7 @@ input[type="number"] {
 }
 
 .promo__container {
+  min-height: 600px;
   padding: 210px 0 80px;
   background: url("../image/promo.png") no-repeat;
   background-position: right 113px bottom 0;
@@ -191,9 +171,11 @@ input[type="number"] {
 }
 
 .product {
+  border-radius: 6px;
+  overflow: hidden;
   font-size: 0;
   background: #f2f9f7;
-  min-height: 600px;
+  /* min-height: 600px; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -228,6 +210,7 @@ input[type="number"] {
   padding: 40px 24px 24px;
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
 .footer {
@@ -261,6 +244,7 @@ input[type="number"] {
   gap: 3px; */
   font-size: 16px;
 }
+
 .footer__copyrite {
   margin: 0 0 17px;
   /* font-size: 16px; */
@@ -488,6 +472,7 @@ input[type="number"] {
 .order_payment-label:last-child {
   margin-bottom: 0;
 }
+
 .order_radio {
   margin-right: 8px;
 }
@@ -573,6 +558,7 @@ input[type="number"] {
   outline: none;
   border: none;
 }
+
 .modal__order-button {
   grid-area: button;
   border: 1px solid #64099b;
@@ -583,6 +569,7 @@ input[type="number"] {
   cursor: pointer;
   margin-left: auto;
 }
+
 .modal__close {
   background: transparent;
   font-weight: 900;
@@ -602,6 +589,42 @@ input[type="number"] {
   height: 600px;
   background-color: "#f2f9f7";
 }
+
+
+.modal-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.modal-cart__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
+.modal-cart__title {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.modal-cart__button {
+  background-color: #64099b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
 
 @media (max-width: 1240px) {
   .container {

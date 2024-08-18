@@ -2,6 +2,7 @@ import Modal from "react-modal";
 import { API_URL } from "../const"
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
+import style from './ProductModal.module.css'
 
 const customStyles = {
   content: {
