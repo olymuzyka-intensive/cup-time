@@ -119,7 +119,7 @@ input[type="number"] {
 }
 
 .header__burger {
-  display: none; /* Скрыть кнопку-бургер по умолчанию */
+  display: none; 
 }
 
 .promo {
@@ -480,13 +480,16 @@ input[type="number"] {
 .modal {
   display: flex;
   justify-content: space-between;
-  width: 744px;
+  max-width: 744px;
+  width: 100%;
+  margin: auto;
   position: relative;
-
+  overflow: hidden;
 }
 
 .modal__img {
-  width: 336px;
+  width: 45%;
+  object-fit: cover;
 }
 
 .modal__info {
@@ -494,7 +497,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 55%;
 }
 
 .modal__title,
@@ -835,13 +838,17 @@ input[type="number"] {
     display: none;
   }
 
-  .header__mobile {
+  .header__burger {
     display: flex;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 
   .header__cart-link {
     margin-left: auto;
-    margin-right: 16px;
+    /* margin-right: 16px; */
   }
 
   .promo__container {

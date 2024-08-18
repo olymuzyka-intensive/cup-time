@@ -84,7 +84,7 @@ export const Header = () => {
           </Link>
 
           <button
-            className="header__mobile"
+            className="header__burger"
             aria-label="Открыть меню"
             onClick={openMenu}
           >
