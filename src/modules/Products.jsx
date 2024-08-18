@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { Product } from "./Product";
 import { useProducts } from "../context/ProductContext";
 import { useSearchParams } from "react-router-dom";
-import { API_URL } from "../const"
+import { SkeletonLoader } from "./SkeletonLoader";
+// import { API_URL } from "../const"
 
 export const Products = () => {
   const [seachParams] = useSearchParams()
@@ -20,7 +21,11 @@ export const Products = () => {
         <h2 className="products__title">{category}</h2>
 
         <ul className="products__list">
-          {products.map((item) => (<Product key={item.id} data={item}/>))}
+          {products.length ? (
+            products.map((item) => <Product key={item.id} data={item}/>)
+            ) : (
+              <SkeletonLoader />
+            )}
         </ul>
       </div>
     </section>

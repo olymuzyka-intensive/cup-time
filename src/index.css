@@ -320,7 +320,7 @@ input[type="number"] {
 
 .cart__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -511,7 +511,8 @@ input[type="number"] {
   width: 100%;
 }
 
-.modal__title, .modal__price {
+.modal__title,
+.modal__price {
   font-weight: 400;
   font-size: 24px;
   color: #1d1c1d;
@@ -586,7 +587,7 @@ input[type="number"] {
   background: transparent;
   font-weight: 900;
   font-size: 30px;
-  color: #B8B8B8;
+  color: #b8b8b8;
   border: none;
   cursor: pointer;
   outline: none;
@@ -594,6 +595,12 @@ input[type="number"] {
   top: 10px;
   right: 10px;
   rotate: 45deg;
+}
+
+.skeleton-wrapper {
+  width: 100%;
+  height: 600px;
+  background-color: "#f2f9f7";
 }
 
 @media (max-width: 1240px) {
@@ -633,7 +640,6 @@ input[type="number"] {
     gap: 32px;
   }
 
-
   .cart {
     padding: 170px 0 50;
   }
@@ -643,7 +649,7 @@ input[type="number"] {
   }
 
   .cart__items {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 
   .cart-item__title {
@@ -655,6 +661,10 @@ input[type="number"] {
 
   .order__form {
     max-width: 620px;
+  }
+
+  .skeleton-wrapper {
+    height: 450px;
   }
 }
 
@@ -753,7 +763,7 @@ input[type="number"] {
   }
 
   .cart__items {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 16px;
   }
 
@@ -777,6 +787,10 @@ input[type="number"] {
 
   .order__input {
     padding: 12px 16px;
+  }
+
+  .skeleton-wrapper {
+    height: 360px;
   }
 }
 

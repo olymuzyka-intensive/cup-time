@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
+import { useCart } from "../context/CartContext";
 
 export const Header = () => {
   const location = useLocation();
@@ -8,6 +9,7 @@ export const Header = () => {
 
     return currentCategory === category ? "active" : "";
   }
+  const { cart } = useCart();
 
     return (
     <header className="header">
@@ -49,7 +51,7 @@ export const Header = () => {
             </nav>
 
             <Link to="cart" className="header__cart-link">
-              6
+              {/* {cart.length} */}
             </Link>
 
             <button className='header__mobile'>
